@@ -18,7 +18,7 @@ class TabBarVC: UITabBarController {
 
     func setupViewControllersWithNavigation() {
         
-        let categoryVC = CategoryTableViewController()
+        let categoryVC = CategoriesVC()
         let OrderVC = OrderTableViewController()
 
         let firstNavController = UINavigationController(rootViewController: categoryVC)

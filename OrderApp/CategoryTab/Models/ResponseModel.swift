@@ -16,7 +16,6 @@ struct CategoriesResponse: Codable {
 }
 
 struct OrderResponse: Codable {
-    
     let prepTime: Int
     
     enum CodingKeys: String, CodingKey {
