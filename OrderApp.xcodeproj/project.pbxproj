@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		F7320D382C99255900BBEDD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D372C99255900BBEDD2 /* AppDelegate.swift */; };
-		F7320D3A2C99255900BBEDD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D392C99255900BBEDD2 /* SceneDelegate.swift */; };
-		F7320D3C2C99255900BBEDD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D3B2C99255900BBEDD2 /* ViewController.swift */; };
-		F7320D3F2C99255900BBEDD2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F7320D3E2C99255900BBEDD2 /* Base */; };
 		F7320D412C99255A00BBEDD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7320D402C99255A00BBEDD2 /* Assets.xcassets */; };
 		F7320D442C99255A00BBEDD2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F7320D432C99255A00BBEDD2 /* Base */; };
+		F7320D4D2C992E2F00BBEDD2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D4C2C992E2F00BBEDD2 /* TabBarVC.swift */; };
+		F7320D502C992FCE00BBEDD2 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D4E2C992FCE00BBEDD2 /* CategoryTableViewController.swift */; };
+		F7320D512C992FCE00BBEDD2 /* CategoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7320D4F2C992FCE00BBEDD2 /* CategoryTableViewController.xib */; };
+		F7320D562C99301400BBEDD2 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D542C99301400BBEDD2 /* MenuTableViewController.swift */; };
+		F7320D572C99301400BBEDD2 /* MenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7320D552C99301400BBEDD2 /* MenuTableViewController.xib */; };
+		F7320D5A2C99302200BBEDD2 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D582C99302200BBEDD2 /* OrderTableViewController.swift */; };
+		F7320D5B2C99302200BBEDD2 /* OrderTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7320D592C99302200BBEDD2 /* OrderTableViewController.xib */; };
+		F7320D5E2C9932CD00BBEDD2 /* MenuItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D5C2C9932CD00BBEDD2 /* MenuItemDetailsViewController.swift */; };
+		F7320D5F2C9932CD00BBEDD2 /* MenuItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7320D5D2C9932CD00BBEDD2 /* MenuItemDetailsViewController.xib */; };
+		F74C83E32C99A2BD00014D5B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C83E22C99A2BD00014D5B /* MenuItem.swift */; };
+		F74C83E52C99A37100014D5B /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C83E42C99A37100014D5B /* ResponseModel.swift */; };
+		F74C83E82C99A4F300014D5B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C83E72C99A4F300014D5B /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7320D342C99255900BBEDD2 /* OrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7320D372C99255900BBEDD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7320D392C99255900BBEDD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7320D3B2C99255900BBEDD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F7320D3E2C99255900BBEDD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7320D402C99255A00BBEDD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7320D432C99255A00BBEDD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7320D452C99255A00BBEDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7320D4C2C992E2F00BBEDD2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		F7320D4E2C992FCE00BBEDD2 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		F7320D4F2C992FCE00BBEDD2 /* CategoryTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewController.xib; sourceTree = "<group>"; };
+		F7320D542C99301400BBEDD2 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		F7320D552C99301400BBEDD2 /* MenuTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewController.xib; sourceTree = "<group>"; };
+		F7320D582C99302200BBEDD2 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		F7320D592C99302200BBEDD2 /* OrderTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewController.xib; sourceTree = "<group>"; };
+		F7320D5C2C9932CD00BBEDD2 /* MenuItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailsViewController.swift; sourceTree = "<group>"; };
+		F7320D5D2C9932CD00BBEDD2 /* MenuItemDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemDetailsViewController.xib; sourceTree = "<group>"; };
+		F74C83E22C99A2BD00014D5B /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		F74C83E42C99A37100014D5B /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		F74C83E72C99A4F300014D5B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,96 @@
 		F7320D362C99255900BBEDD2 /* OrderApp */ = {
 			isa = PBXGroup;
 			children = (
-				F7320D372C99255900BBEDD2 /* AppDelegate.swift */,
-				F7320D392C99255900BBEDD2 /* SceneDelegate.swift */,
-				F7320D3B2C99255900BBEDD2 /* ViewController.swift */,
-				F7320D3D2C99255900BBEDD2 /* Main.storyboard */,
-				F7320D402C99255A00BBEDD2 /* Assets.xcassets */,
-				F7320D422C99255A00BBEDD2 /* LaunchScreen.storyboard */,
 				F7320D452C99255A00BBEDD2 /* Info.plist */,
+				F7320D372C99255900BBEDD2 /* AppDelegate.swift */,
+				F7320D622C99334200BBEDD2 /* Components */,
+				F7320D602C99330700BBEDD2 /* CategoryTab */,
+				F7320D612C99331B00BBEDD2 /* OrderTab */,
+				F7320D4B2C992E0100BBEDD2 /* Support */,
 			);
 			path = OrderApp;
+			sourceTree = "<group>";
+		};
+		F7320D4B2C992E0100BBEDD2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F7320D402C99255A00BBEDD2 /* Assets.xcassets */,
+				F7320D422C99255A00BBEDD2 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F7320D602C99330700BBEDD2 /* CategoryTab */ = {
+			isa = PBXGroup;
+			children = (
+				F7320D642C99344D00BBEDD2 /* Models */,
+				F7320D662C99345E00BBEDD2 /* Views */,
+				F7320D652C99345500BBEDD2 /* ViewModels */,
+			);
+			path = CategoryTab;
+			sourceTree = "<group>";
+		};
+		F7320D612C99331B00BBEDD2 /* OrderTab */ = {
+			isa = PBXGroup;
+			children = (
+				F74C83E62C99A4E000014D5B /* Models */,
+				F7320D582C99302200BBEDD2 /* OrderTableViewController.swift */,
+				F7320D592C99302200BBEDD2 /* OrderTableViewController.xib */,
+			);
+			path = OrderTab;
+			sourceTree = "<group>";
+		};
+		F7320D622C99334200BBEDD2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F7320D632C99334F00BBEDD2 /* TabBarController */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F7320D632C99334F00BBEDD2 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F7320D4C2C992E2F00BBEDD2 /* TabBarVC.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		F7320D642C99344D00BBEDD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F74C83E22C99A2BD00014D5B /* MenuItem.swift */,
+				F74C83E42C99A37100014D5B /* ResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7320D652C99345500BBEDD2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F7320D662C99345E00BBEDD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7320D4E2C992FCE00BBEDD2 /* CategoryTableViewController.swift */,
+				F7320D4F2C992FCE00BBEDD2 /* CategoryTableViewController.xib */,
+				F7320D542C99301400BBEDD2 /* MenuTableViewController.swift */,
+				F7320D552C99301400BBEDD2 /* MenuTableViewController.xib */,
+				F7320D5C2C9932CD00BBEDD2 /* MenuItemDetailsViewController.swift */,
+				F7320D5D2C9932CD00BBEDD2 /* MenuItemDetailsViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F74C83E62C99A4E000014D5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F74C83E72C99A4F300014D5B /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +224,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7320D572C99301400BBEDD2 /* MenuTableViewController.xib in Resources */,
 				F7320D412C99255A00BBEDD2 /* Assets.xcassets in Resources */,
 				F7320D442C99255A00BBEDD2 /* Base in Resources */,
-				F7320D3F2C99255900BBEDD2 /* Base in Resources */,
+				F7320D5B2C99302200BBEDD2 /* OrderTableViewController.xib in Resources */,
+				F7320D512C992FCE00BBEDD2 /* CategoryTableViewController.xib in Resources */,
+				F7320D5F2C9932CD00BBEDD2 /* MenuItemDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7320D3C2C99255900BBEDD2 /* ViewController.swift in Sources */,
+				F74C83E32C99A2BD00014D5B /* MenuItem.swift in Sources */,
+				F7320D562C99301400BBEDD2 /* MenuTableViewController.swift in Sources */,
+				F7320D5A2C99302200BBEDD2 /* OrderTableViewController.swift in Sources */,
+				F74C83E82C99A4F300014D5B /* Order.swift in Sources */,
+				F7320D4D2C992E2F00BBEDD2 /* TabBarVC.swift in Sources */,
 				F7320D382C99255900BBEDD2 /* AppDelegate.swift in Sources */,
-				F7320D3A2C99255900BBEDD2 /* SceneDelegate.swift in Sources */,
+				F7320D502C992FCE00BBEDD2 /* CategoryTableViewController.swift in Sources */,
+				F74C83E52C99A37100014D5B /* ResponseModel.swift in Sources */,
+				F7320D5E2C9932CD00BBEDD2 /* MenuItemDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F7320D3D2C99255900BBEDD2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7320D3E2C99255900BBEDD2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F7320D422C99255A00BBEDD2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +397,6 @@
 				INFOPLIST_FILE = OrderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +424,6 @@
 				INFOPLIST_FILE = OrderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
