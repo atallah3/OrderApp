@@ -14,4 +14,6 @@ extension UIColor {
     static let OASunsetOrange = UIColor(named: "Sunset Orange") ?? .orange
     
     static let lightToOrangeGradient = [UIColor.OACloudWhite, UIColor.OASunsetOrange]
+    static let orangeToLightGradient = [UIColor.OASunsetOrange, UIColor.OACloudWhite]
+
 }

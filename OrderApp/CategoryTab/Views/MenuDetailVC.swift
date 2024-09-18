@@ -9,6 +9,13 @@ import UIKit
 
 class MenuDetailVC: UIViewController {
     
+    //MARK: - @IBOutlets
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailTextLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var addToOrder: UIButton!
+    
     //MARK: - Properties
     let vm: MenuDetailViewModel
     
@@ -25,9 +32,25 @@ class MenuDetailVC: UIViewController {
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        print()
+        configureViewController()
+        getMenuDetailsData()
     }
     
     //MARK: - Funcitons
-
+    private func configureViewController() {
+        view.addGradientBackgroundColor(with: UIColor.orangeToLightGradient)
+    }
+    
+    private func getMenuDetailsData() {
+        let data = vm.getMenuItem()
+        self.nameLabel.text = data.name
+        self.detailTextLabel.text = data.detailText
+        self.priceLabel.text = "\(data.price)$"
+    }
+    
+    //MARK: - @IBActions
+    @IBAction func addOrderBtnTapped(_ sender: UIButton) {
+        addToOrder.OAButtonAnimation()
+        vm.saveOrder()
+    }
 }

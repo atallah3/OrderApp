@@ -5,7 +5,7 @@
 //  Created by Abd Elrahman Atallah on 17/09/2024.
 //
 
-import Foundation
+import UIKit
 
 class MenuDetailViewModel {
     
@@ -13,5 +13,17 @@ class MenuDetailViewModel {
     
     init(menuItem: MenuItem) {
         self.menuItem = menuItem
+    }
+    
+    func getMenuItem() -> MenuItem {
+        menuItem
+    }
+    
+    func getDeliverdOrder() -> DeliverdOrder {
+        DeliverdOrder(name: menuItem.name, price: "\(menuItem.price)")
+    }
+    
+    func saveOrder() {
+        UserDefaultManager.shared.saveOrder(with: getDeliverdOrder())
     }
 }

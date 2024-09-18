@@ -20,7 +20,7 @@ class TabBarVC: UITabBarController {
         
         let categoryVC = CategoriesVC()
         categoryVC.tabBarItem.title = "Menu"
-        let OrderVC = OrderTableViewController()
+        let OrderVC = OrderVC()
         OrderVC.tabBarItem.title = "Order"
 
         let firstNavController = UINavigationController(rootViewController: categoryVC)
