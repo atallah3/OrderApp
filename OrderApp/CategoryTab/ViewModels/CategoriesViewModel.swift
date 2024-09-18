@@ -23,12 +23,20 @@ class CategoriesViewModel {
         }
     }
     
-    func getCategories() -> [String]? {
-        categoris
+    func getCategory(indexPath: IndexPath) -> String? {
+        if let categoris = categoris {
+           return categoris[indexPath.row]
+        }
+        return nil
     }
     
     func getCategoriesCount() -> Int {
         guard let categoris else { return 0 }
         return categoris.count
+    }
+    
+    func showMenuScreen(view: UIViewController, category: String) {
+        let menuVC = MenuVC(nibName: "MenuVC", vm: MenuViewModel(category: category.lowercased()))
+        view.navigationController?.pushViewController(menuVC, animated: true)
     }
 }

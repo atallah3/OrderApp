@@ -20,18 +20,27 @@ class CategoriesVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureTableView()
-//        vm.fetchCategoriesData()
     }
     
     //MARK: - Functions
     func configureViewController() {
-        title = "Menu"
+        title = "Categories"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        view.addGradientBackgroundColor(with: UIColor.lightToOrangeGradient)
     }
     
     private func configureTableView() {
         tableView.register(UINib(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func configureCategoryCell(cell: CategoriesTableViewCell, indexPath: IndexPath) {
+        if let title = vm.getCategory(indexPath: indexPath)  {
+            cell.configureCell(title: title.capitalized)
+        } else {
+            self.showAlert(title: "Error loading Categories", message: "Please check your internet connection", buttonLabel: "Dismiss")
+        }
     }
 }
 
@@ -44,17 +53,16 @@ extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as? CategoriesTableViewCell else { return UITableViewCell() }
-        if let title = vm.getCategories()  {
-            
-            cell.configureCell(title: title[indexPath.row].capitalized)
-        } else {
-            self.showAlert(title: "Error loading Categories", message: "Please check your internet connection", buttonLabel: "Dismiss")
-        }
-        
+        configureCategoryCell(cell: cell, indexPath: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let category = vm.getCategory(indexPath: indexPath) else { return }
+        vm.showMenuScreen(view: self, category: category)
     }
 }
