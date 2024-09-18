@@ -20,7 +20,6 @@ class OrderVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureTableView()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,12 +31,22 @@ class OrderVC: UIViewController {
     private func configureViewController() {
         title = "Order"
         view.addGradientBackgroundColor(with: UIColor.lightToOrangeGradient)
+        configureTopBarEditButton()
+    }
+    
+    private func configureTopBarEditButton() {
+        navigationItem.leftBarButtonItem = editButtonItem
     }
     
     private func configureTableView() {
         tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: true)
     }
 }
 
@@ -53,5 +62,16 @@ extension OrderVC: UITableViewDelegate, UITableViewDataSource {
         else { return UITableViewCell() }
         vm.configureOrderCell(cell: cell, indexPath: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.vm.removeAt(indexPath: indexPath)
+            tableView.reloadData()
+        }
     }
 }

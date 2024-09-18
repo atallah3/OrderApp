@@ -13,16 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let rootViewController = TabBarVC()
-//        let navVC = UINavigationController(rootViewController: rootViewController )
-        
-        window?.rootViewController = rootViewController
+        window?.rootViewController = TabBarVC()
         window?.makeKeyAndVisible()
         
         return true
     }
+
 }
 

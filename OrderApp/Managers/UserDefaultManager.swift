@@ -56,7 +56,10 @@ class UserDefaultManager {
     
     func removeOrder(named orderName: String) {
         var orders = loadOrders()
-        orders.removeAll { $0.name == orderName }
+//        orders.removeAll { $0.name == orderName }
+        orders.removeAll { order in
+            order.name == orderName
+        }
         saveOrders(orders)
     }
     

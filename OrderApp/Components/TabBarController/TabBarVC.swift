@@ -8,23 +8,38 @@
 import UIKit
 
 class TabBarVC: UITabBarController {
-
-    let vm = OrderViewModel()
+    
+//    var orderTabItem: UITabBarItem!
+//    let vm = OrderViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllersWithNavigation()
         customizeTabBarAppearance()
+//        addOservation()
+        
     }
     
-
+    
+//    func addOservation() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateBadge), name: orderUpdateNotificatoin, object: nil)
+//    }
+//    
+//    @objc func updateBadge() {
+//        // Safely updating the badge value
+//        let savedOrderCount = vm.getSavedOrderCount()
+//        print(savedOrderCount)
+//        orderTabItem.badgeValue = savedOrderCount > 0 ? "\(savedOrderCount)" : nil
+//        
+//    }
+    
     func setupViewControllersWithNavigation() {
         
         let categoryVC = CategoriesVC()
         categoryVC.tabBarItem.title = "Menu"
         let OrderVC = OrderVC()
         OrderVC.tabBarItem.title = "Order"
-       
+        
         
         let firstNavController = UINavigationController(rootViewController: categoryVC)
         let secondNavController = UINavigationController(rootViewController: OrderVC)
