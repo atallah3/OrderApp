@@ -8,14 +8,14 @@
 import Foundation
 
 class OrderViewModel {
-    private let order = Order()
+    private var order = Order()
     
     func getOrder() -> Order {
         order
     }
     
-    func getMenuItemsCount() -> Int{
-        order.menuItems.count
+    func getSavedOrderCount() -> Int {
+        getSavedOrders().count
     }
     
     func getMenuItems(indexPath: IndexPath) -> MenuItem {
@@ -23,13 +23,13 @@ class OrderViewModel {
     }
     
     func configureOrderCell(cell: OrderTableViewCell, indexPath: IndexPath) {
-        let menuItem = getSavedOrders()!
-        let name = menuItem[indexPath.row].name
-        let price = "\(menuItem[indexPath.row].price)$"
+        let orders = getSavedOrders()
+        let name = orders[indexPath.row].name
+        let price = "\(orders[indexPath.row].price)$"
         cell.configureCell(name: name, price: price)
     }
     
-    func getSavedOrders() -> [DeliverdOrder]? {
+    func getSavedOrders() -> [DeliverdOrder] {
         UserDefaultManager.shared.getSavedOrders()
     }
 }

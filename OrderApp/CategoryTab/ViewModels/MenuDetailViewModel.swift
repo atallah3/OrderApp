@@ -24,6 +24,6 @@ class MenuDetailViewModel {
     }
     
     func saveOrder() {
-        UserDefaultManager.shared.saveOrder(with: getDeliverdOrder())
+        UserDefaultManager.shared.saveOrder(order: getDeliverdOrder())
     }
 }

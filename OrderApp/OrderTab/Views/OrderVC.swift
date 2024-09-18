@@ -20,6 +20,12 @@ class OrderVC: UIViewController {
         super.viewDidLoad()
         configureViewController()
         configureTableView()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     //MARK: - Functions
@@ -39,17 +45,13 @@ class OrderVC: UIViewController {
 extension OrderVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return vm.getMenuItemsCount()
-        return 4
+        return vm.getSavedOrderCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as? OrderTableViewCell
-        else {
-            return UITableViewCell()
-        }
+        else { return UITableViewCell() }
         vm.configureOrderCell(cell: cell, indexPath: indexPath)
-        
         return cell
     }
 }
