@@ -74,7 +74,10 @@ extension OrderVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as? OrderTableViewCell
         else { return UITableViewCell() }
-        vm.configureOrderCell(cell: cell, indexPath: indexPath)
+        vm.fetchImage(indexPath: indexPath) { image in
+            let image = image
+            self.vm.configureOrderCell(image: image!, cell: cell, indexPath: indexPath)
+        }
         return cell
     }
     

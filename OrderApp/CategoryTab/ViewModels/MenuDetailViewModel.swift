@@ -17,10 +17,6 @@ class MenuDetailViewModel {
         self.menuItem = menuItem
     }
     
-//    func getImage() -> UIImage? {
-//        image
-//    }
-    
     func getMenuItem() -> MenuItem {
         menuItem
     }

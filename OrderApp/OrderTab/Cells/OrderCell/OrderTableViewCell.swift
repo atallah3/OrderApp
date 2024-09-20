@@ -11,6 +11,7 @@ class OrderTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var cellImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +24,9 @@ class OrderTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(name: String, price: String) {
+    func configureCell(name: String, price: String, image: UIImage) {
         self.nameLabel.text = name
         self.priceLabel.text = price
+        self.cellImageView.image = image
     }
 }

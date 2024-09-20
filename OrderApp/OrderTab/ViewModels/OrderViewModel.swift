@@ -10,7 +10,7 @@ import UIKit
 class OrderViewModel {
     
     var minutesToPrepare: Int = 0
-//    var totalPrice = 0.0
+    var image: UIImage?
     let netwoekManager = NetworkManager.shared
     
     private var orders: [DeliverdOrder] = [] {
@@ -27,10 +27,10 @@ class OrderViewModel {
         orders[indexPath.row]
     }
     
-    func configureOrderCell(cell: OrderTableViewCell, indexPath: IndexPath) {
+    func configureOrderCell(image: UIImage, cell: OrderTableViewCell, indexPath: IndexPath) {
         let name = orders[indexPath.row].name
         let price = "\(orders[indexPath.row].price)$"
-        cell.configureCell(name: name, price: price)
+        cell.configureCell(name: name, price: price, image: image)
         
     }
     
@@ -90,9 +90,37 @@ class OrderViewModel {
         return menuIds
     }
     
+    func getImageUrl(indexPath: IndexPath) -> URL {
+        let orderUrl = getOrderWith(indexPath: indexPath).imageURL
+        return orderUrl
+    }
+    
     func goToConfirmationOrderScreen(view: UIViewController) {
-        let OrderConfiramtionVC = OrderConfirmationVC(nibName: "OrderConfirmationVC", bundle: nil)
-        OrderConfiramtionVC.minutesToPrepare = minutesToPrepare
+        let OrderConfiramtionVC = OrderConfirmationVC(vm: OrderConfirmationViewModel(minutesToPrepare: minutesToPrepare))
         view.present(OrderConfiramtionVC, animated: true)
+    }
+    
+    private func downloadImage(indexPath: IndexPath) {
+        fetchImage(indexPath: indexPath) { image in
+            guard let image else { return }
+            self.image = image
+        }
+    }
+    
+    func fetchImage(indexPath: IndexPath, completion: @escaping (UIImage?) -> Void) {
+        Task {
+            do {
+                let image = try await netwoekManager.fetchImage(from: getImageUrl(indexPath: indexPath))
+                DispatchQueue.main.async {
+                    self.image = image
+                    completion(image)
+                }
+            } catch {
+                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
     }
 }
