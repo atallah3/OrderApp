@@ -11,6 +11,7 @@ enum NetworkErrors: Error, LocalizedError {
     case categoriesNotFound
     case menuItemsNotFound
     case orderRequestFailed
+    case imageDataMissing
 }
 
 public let orderUpdateNotificatoin = Notification.Name("orderUpdateNotificatoin")

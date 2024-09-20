@@ -25,6 +25,7 @@ class OrderVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        print(vm.getTotalPrice())
     }
     
     //MARK: - Functions
@@ -32,10 +33,23 @@ class OrderVC: UIViewController {
         title = "Order"
         view.addGradientBackgroundColor(with: UIColor.lightToOrangeGradient)
         configureTopBarEditButton()
+        configureTopBarSubmitButton()
     }
     
     private func configureTopBarEditButton() {
         navigationItem.leftBarButtonItem = editButtonItem
+        editButtonItem.tintColor = .OAMidnightBlue
+    }
+    
+    private func configureTopBarSubmitButton() {
+        let submitButton = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(submitBtnTapped))
+        submitButton.tintColor = .OAMidnightBlue
+        navigationItem.setRightBarButton(submitButton, animated: false)
+        
+    }
+    
+    @objc func submitBtnTapped() {
+        vm.actionSheetConfiguration(view: self)
     }
     
     private func configureTableView() {

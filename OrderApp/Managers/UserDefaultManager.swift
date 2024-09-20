@@ -8,8 +8,10 @@
 import Foundation
 
 struct DeliverdOrder: Codable {
+    let id: Int
     let name: String
-    let price: String
+    let price: Double
+    let imageURL: URL
 }
 
 class UserDefaultManager {
@@ -56,7 +58,6 @@ class UserDefaultManager {
     
     func removeOrder(named orderName: String) {
         var orders = loadOrders()
-//        orders.removeAll { $0.name == orderName }
         orders.removeAll { order in
             order.name == orderName
         }

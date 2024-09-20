@@ -5,11 +5,13 @@
 //  Created by Abd Elrahman Atallah on 17/09/2024.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     
     static let shared = NetworkManager()
+    static let order = Order()
+    
     private init() {}
     
     let baseURL = URL(string: "http://localhost:8080/")
@@ -44,7 +46,7 @@ class NetworkManager {
         guard let menuURL = components.url else { throw NetworkErrors.menuItemsNotFound }
         
         let (data, response) = try await URLSession.shared.data(from: menuURL)
-
+        
         guard let httpResponse = response as? HTTPURLResponse,
               httpResponse.statusCode == 200 else {
             throw NetworkErrors.menuItemsNotFound
@@ -84,6 +86,20 @@ class NetworkManager {
         let orderResponse = try decoder.decode(OrderResponse.self, from: data)
         
         return orderResponse.prepTime
+    }
+    
+    func fetchImage(from url: URL) async throws -> UIImage {
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw NetworkErrors.imageDataMissing
+        }
+        
+        guard let image = UIImage (data: data) else {
+            throw NetworkErrors.imageDataMissing
+        }
+        return image
     }
 }
 

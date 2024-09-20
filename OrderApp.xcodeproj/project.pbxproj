@@ -39,6 +39,8 @@
 		F75F10642C9AFC200006EC9F /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F75F10632C9AFC200006EC9F /* OrderTableViewCell.xib */; };
 		F75F10652C9AFC200006EC9F /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F10622C9AFC200006EC9F /* OrderTableViewCell.swift */; };
 		F75F10692C9B04AA0006EC9F /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F10682C9B04AA0006EC9F /* UserDefaultManager.swift */; };
+		F76F5C6A2C9BC40D00E6EC81 /* OrderConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F5C682C9BC40D00E6EC81 /* OrderConfirmationVC.swift */; };
+		F76F5C6B2C9BC40D00E6EC81 /* OrderConfirmationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F5C692C9BC40D00E6EC81 /* OrderConfirmationVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		F75F10622C9AFC200006EC9F /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		F75F10632C9AFC200006EC9F /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		F75F10682C9B04AA0006EC9F /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		F76F5C682C9BC40D00E6EC81 /* OrderConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationVC.swift; sourceTree = "<group>"; };
+		F76F5C692C9BC40D00E6EC81 /* OrderConfirmationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderConfirmationVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,8 @@
 			children = (
 				F75F105A2C9AFACE0006EC9F /* OrderVC.swift */,
 				F75F105B2C9AFACE0006EC9F /* OrderVC.xib */,
+				F76F5C682C9BC40D00E6EC81 /* OrderConfirmationVC.swift */,
+				F76F5C692C9BC40D00E6EC81 /* OrderConfirmationVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			files = (
 				F74C83F52C9A2B9D00014D5B /* CategoriesTableViewCell.xib in Resources */,
 				F75F105C2C9AFACE0006EC9F /* OrderVC.xib in Resources */,
+				F76F5C6B2C9BC40D00E6EC81 /* OrderConfirmationVC.xib in Resources */,
 				F7320D412C99255A00BBEDD2 /* Assets.xcassets in Resources */,
 				F75F10642C9AFC200006EC9F /* OrderTableViewCell.xib in Resources */,
 				F74C840E2C9A8F8800014D5B /* MenuDetailVC.xib in Resources */,
@@ -376,6 +383,7 @@
 				F74C83E82C99A4F300014D5B /* Order.swift in Sources */,
 				F74C83F62C9A2B9D00014D5B /* CategoriesTableViewCell.swift in Sources */,
 				F7320D4D2C992E2F00BBEDD2 /* TabBarVC.swift in Sources */,
+				F76F5C6A2C9BC40D00E6EC81 /* OrderConfirmationVC.swift in Sources */,
 				F75F105D2C9AFACE0006EC9F /* OrderVC.swift in Sources */,
 				F74C83F12C9A2AB900014D5B /* CategoriesVC.swift in Sources */,
 				F7320D382C99255900BBEDD2 /* AppDelegate.swift in Sources */,

@@ -13,4 +13,13 @@ extension UIViewController {
         alertVC.addAction(UIAlertAction(title: buttonLabel ?? "Ok", style: .default))
         self.present(alertVC, animated: true)
     }
+    
+    func showActionSheetWithDismissBtn(title: String, message: String, action: UIAlertAction) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        alertController.addAction(action)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .destructive))
+        
+        self.present(alertController, animated: true)
+    }
 }

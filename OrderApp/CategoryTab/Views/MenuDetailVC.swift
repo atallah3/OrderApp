@@ -46,6 +46,14 @@ class MenuDetailVC: UIViewController {
         self.nameLabel.text = data.name
         self.detailTextLabel.text = data.detailText
         self.priceLabel.text = "\(data.price)$"
+        downloadImage()
+    }
+    
+    private func downloadImage() {
+        vm.fetchImage { image in
+            guard let image = image else { return }
+            self.imageView.image = image
+        }
     }
     
     //MARK: - @IBActions
