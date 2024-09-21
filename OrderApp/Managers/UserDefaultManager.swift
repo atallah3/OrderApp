@@ -64,4 +64,10 @@ class UserDefaultManager {
         saveOrders(orders)
     }
     
+    func removeAll() {
+        var orders = loadOrders()
+        orders.removeAll()
+        saveOrders(orders)
+    }
+    
 }

@@ -20,10 +20,10 @@
                         <rect key="frame" x="8" y="8" width="478" height="68"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNu-FG-MbB">
-                                <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="68"/>
+                                <rect key="frame" x="0.0" y="0.0" width="62" height="68"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvF-bt-DDN">
-                                <rect key="frame" x="79.666666666666657" y="0.0" width="294.66666666666674" height="68"/>
+                                <rect key="frame" x="70" y="0.0" width="304.33333333333331" height="68"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="kpC-Ng-OSb" firstAttribute="width" secondItem="YkV-9K-vYM" secondAttribute="width" multiplier="0.2" id="V4J-J0-TzN"/>
-                            <constraint firstItem="rNu-FG-MbB" firstAttribute="width" secondItem="YkV-9K-vYM" secondAttribute="width" multiplier="0.15" id="thv-WW-SK9"/>
+                            <constraint firstItem="rNu-FG-MbB" firstAttribute="width" secondItem="YkV-9K-vYM" secondAttribute="width" multiplier="0.13" id="thv-WW-SK9"/>
                         </constraints>
                     </stackView>
                 </subviews>

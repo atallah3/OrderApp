@@ -12,6 +12,7 @@
 		F7320D442C99255A00BBEDD2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F7320D432C99255A00BBEDD2 /* Base */; };
 		F7320D4D2C992E2F00BBEDD2 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7320D4C2C992E2F00BBEDD2 /* TabBarVC.swift */; };
 		F73DED252C9D980300BF0163 /* OrderConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DED242C9D980300BF0163 /* OrderConfirmationViewModel.swift */; };
+		F73DED272C9D9CD800BF0163 /* Int+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DED262C9D9CD800BF0163 /* Int+EXT.swift */; };
 		F74C83E32C99A2BD00014D5B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C83E22C99A2BD00014D5B /* MenuItem.swift */; };
 		F74C83E52C99A37100014D5B /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C83E42C99A37100014D5B /* ResponseModel.swift */; };
 		F74C83E82C99A4F300014D5B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74C83E72C99A4F300014D5B /* Order.swift */; };
@@ -42,6 +43,7 @@
 		F75F10692C9B04AA0006EC9F /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75F10682C9B04AA0006EC9F /* UserDefaultManager.swift */; };
 		F76F5C6A2C9BC40D00E6EC81 /* OrderConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F5C682C9BC40D00E6EC81 /* OrderConfirmationVC.swift */; };
 		F76F5C6B2C9BC40D00E6EC81 /* OrderConfirmationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F5C692C9BC40D00E6EC81 /* OrderConfirmationVC.xib */; };
+		F7E071F72C9EE73900B7FEC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E071F62C9EE73900B7FEC1 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,7 @@
 		F7320D452C99255A00BBEDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7320D4C2C992E2F00BBEDD2 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		F73DED242C9D980300BF0163 /* OrderConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewModel.swift; sourceTree = "<group>"; };
+		F73DED262C9D9CD800BF0163 /* Int+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+EXT.swift"; sourceTree = "<group>"; };
 		F74C83E22C99A2BD00014D5B /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		F74C83E42C99A37100014D5B /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		F74C83E72C99A4F300014D5B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		F75F10682C9B04AA0006EC9F /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		F76F5C682C9BC40D00E6EC81 /* OrderConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationVC.swift; sourceTree = "<group>"; };
 		F76F5C692C9BC40D00E6EC81 /* OrderConfirmationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderConfirmationVC.xib; sourceTree = "<group>"; };
+		F7E071F62C9EE73900B7FEC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 			children = (
 				F7320D452C99255A00BBEDD2 /* Info.plist */,
 				F7320D372C99255900BBEDD2 /* AppDelegate.swift */,
+				F7E071F62C9EE73900B7FEC1 /* SceneDelegate.swift */,
 				F74C83E92C99A5EC00014D5B /* Managers */,
 				F7320D622C99334200BBEDD2 /* Components */,
 				F7320D602C99330700BBEDD2 /* CategoryTab */,
@@ -245,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				F74C83FB2C9A301400014D5B /* UIViewController+EXT.swift */,
+				F73DED262C9D9CD800BF0163 /* Int+EXT.swift */,
 				F75F10582C9AF9880006EC9F /* UIButton+EXT.swift */,
 				F74C83FF2C9A794800014D5B /* UIColor+EXT.swift */,
 				F74C83FD2C9A5DA800014D5B /* UIView+EXT.swift */,
@@ -387,6 +393,8 @@
 				F74C83F62C9A2B9D00014D5B /* CategoriesTableViewCell.swift in Sources */,
 				F7320D4D2C992E2F00BBEDD2 /* TabBarVC.swift in Sources */,
 				F76F5C6A2C9BC40D00E6EC81 /* OrderConfirmationVC.swift in Sources */,
+				F7E071F72C9EE73900B7FEC1 /* SceneDelegate.swift in Sources */,
+				F73DED272C9D9CD800BF0163 /* Int+EXT.swift in Sources */,
 				F75F105D2C9AFACE0006EC9F /* OrderVC.swift in Sources */,
 				F73DED252C9D980300BF0163 /* OrderConfirmationViewModel.swift in Sources */,
 				F74C83F12C9A2AB900014D5B /* CategoriesVC.swift in Sources */,

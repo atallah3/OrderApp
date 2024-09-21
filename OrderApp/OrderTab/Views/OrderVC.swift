@@ -25,7 +25,6 @@ class OrderVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        print(vm.getTotalPrice())
     }
     
     //MARK: - Functions
@@ -45,7 +44,6 @@ class OrderVC: UIViewController {
         let submitButton = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(submitBtnTapped))
         submitButton.tintColor = .OAMidnightBlue
         navigationItem.setRightBarButton(submitButton, animated: false)
-        
     }
     
     @objc func submitBtnTapped() {
@@ -74,10 +72,12 @@ extension OrderVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as? OrderTableViewCell
         else { return UITableViewCell() }
-        vm.fetchImage(indexPath: indexPath) { image in
-            let image = image
-            self.vm.configureOrderCell(image: image!, cell: cell, indexPath: indexPath)
+        
+        vm.fetchImage(indexPath: indexPath) { [weak self] image in
+            guard let image = image, let self else { return }
+            self.vm.configureOrderCell(image: image, cell: cell, indexPath: indexPath)
         }
+        
         return cell
     }
     
@@ -90,5 +90,17 @@ extension OrderVC: UITableViewDelegate, UITableViewDataSource {
             self.vm.removeAt(indexPath: indexPath)
             tableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        64
+    }
+}
+
+//MARK: - Order confirmation delegate
+extension OrderVC: OrderConfirmationVCDelegate {
+    func orderConfirmationDidDismiss() {
+        vm.removeAllSavedData()
+        tableView.reloadData()
     }
 }

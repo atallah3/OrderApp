@@ -47,6 +47,11 @@ class OrderViewModel {
         }
     }
     
+    func removeAllSavedData() {
+        UserDefaultManager.shared.removeAll()
+        self.orders.removeAll()
+    }
+    
     func getTotalPrice() -> Double {
         orders.reduce(0) { $0 + $1.price }
     }
@@ -97,7 +102,8 @@ class OrderViewModel {
     
     func goToConfirmationOrderScreen(view: UIViewController) {
         let OrderConfiramtionVC = OrderConfirmationVC(vm: OrderConfirmationViewModel(minutesToPrepare: minutesToPrepare))
-        view.present(OrderConfiramtionVC, animated: true)
+        OrderConfiramtionVC.delegate = (view as! OrderConfirmationVCDelegate)
+        view.showBottomSheet(viewController: OrderConfiramtionVC)
     }
     
     private func downloadImage(indexPath: IndexPath) {
