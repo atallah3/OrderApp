@@ -129,4 +129,8 @@ class OrderViewModel {
             }
         }
     }
+    
+    func updateUserActivity() {
+        MenuHelper.shared.updateUserActivity(with: .order)
+    }
 }

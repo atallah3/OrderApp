@@ -44,6 +44,9 @@
 		F76F5C6A2C9BC40D00E6EC81 /* OrderConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F5C682C9BC40D00E6EC81 /* OrderConfirmationVC.swift */; };
 		F76F5C6B2C9BC40D00E6EC81 /* OrderConfirmationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F5C692C9BC40D00E6EC81 /* OrderConfirmationVC.xib */; };
 		F7E071F72C9EE73900B7FEC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E071F62C9EE73900B7FEC1 /* SceneDelegate.swift */; };
+		F7E071F92C9EE94C00B7FEC1 /* Restoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E071F82C9EE94C00B7FEC1 /* Restoration.swift */; };
+		F7E42A2D2CA219D10081BA54 /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E42A2C2CA219D10081BA54 /* MenuHelper.swift */; };
+		F7E42A2F2CA21D9D0081BA54 /* DeliveredOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E42A2E2CA21D9D0081BA54 /* DeliveredOrder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		F76F5C682C9BC40D00E6EC81 /* OrderConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationVC.swift; sourceTree = "<group>"; };
 		F76F5C692C9BC40D00E6EC81 /* OrderConfirmationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderConfirmationVC.xib; sourceTree = "<group>"; };
 		F7E071F62C9EE73900B7FEC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F7E071F82C9EE94C00B7FEC1 /* Restoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restoration.swift; sourceTree = "<group>"; };
+		F7E42A2C2CA219D10081BA54 /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		F7E42A2E2CA21D9D0081BA54 /* DeliveredOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveredOrder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,14 +124,14 @@
 		F7320D362C99255900BBEDD2 /* OrderApp */ = {
 			isa = PBXGroup;
 			children = (
-				F7320D452C99255A00BBEDD2 /* Info.plist */,
-				F7320D372C99255900BBEDD2 /* AppDelegate.swift */,
 				F7E071F62C9EE73900B7FEC1 /* SceneDelegate.swift */,
+				F7320D452C99255A00BBEDD2 /* Info.plist */,
 				F74C83E92C99A5EC00014D5B /* Managers */,
 				F7320D622C99334200BBEDD2 /* Components */,
 				F7320D602C99330700BBEDD2 /* CategoryTab */,
 				F7320D612C99331B00BBEDD2 /* OrderTab */,
 				F74C83FA2C9A2FFD00014D5B /* Extensions */,
+				F7E42A2B2CA219960081BA54 /* Utilities */,
 				F7320D4B2C992E0100BBEDD2 /* Support */,
 			);
 			path = OrderApp;
@@ -214,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				F74C83E72C99A4F300014D5B /* Order.swift */,
+				F7E42A2E2CA21D9D0081BA54 /* DeliveredOrder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,7 +230,6 @@
 			children = (
 				F74C83EA2C99A60700014D5B /* NetworkManager.swift */,
 				F75F10682C9B04AA0006EC9F /* UserDefaultManager.swift */,
-				F74C83EC2C9A171F00014D5B /* Errors.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -250,10 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				F74C83FB2C9A301400014D5B /* UIViewController+EXT.swift */,
-				F73DED262C9D9CD800BF0163 /* Int+EXT.swift */,
 				F75F10582C9AF9880006EC9F /* UIButton+EXT.swift */,
 				F74C83FF2C9A794800014D5B /* UIColor+EXT.swift */,
 				F74C83FD2C9A5DA800014D5B /* UIView+EXT.swift */,
+				F73DED262C9D9CD800BF0163 /* Int+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,6 +308,17 @@
 				F75F10632C9AFC200006EC9F /* OrderTableViewCell.xib */,
 			);
 			path = OrderCell;
+			sourceTree = "<group>";
+		};
+		F7E42A2B2CA219960081BA54 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F7320D372C99255900BBEDD2 /* AppDelegate.swift */,
+				F7E071F82C9EE94C00B7FEC1 /* Restoration.swift */,
+				F7E42A2C2CA219D10081BA54 /* MenuHelper.swift */,
+				F74C83EC2C9A171F00014D5B /* Errors.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74C83FC2C9A301400014D5B /* UIViewController+EXT.swift in Sources */,
+				F7E42A2F2CA21D9D0081BA54 /* DeliveredOrder.swift in Sources */,
 				F74C83E32C99A2BD00014D5B /* MenuItem.swift in Sources */,
 				F75F10692C9B04AA0006EC9F /* UserDefaultManager.swift in Sources */,
 				F74C83EB2C99A60700014D5B /* NetworkManager.swift in Sources */,
@@ -396,6 +414,7 @@
 				F7E071F72C9EE73900B7FEC1 /* SceneDelegate.swift in Sources */,
 				F73DED272C9D9CD800BF0163 /* Int+EXT.swift in Sources */,
 				F75F105D2C9AFACE0006EC9F /* OrderVC.swift in Sources */,
+				F7E071F92C9EE94C00B7FEC1 /* Restoration.swift in Sources */,
 				F73DED252C9D980300BF0163 /* OrderConfirmationViewModel.swift in Sources */,
 				F74C83F12C9A2AB900014D5B /* CategoriesVC.swift in Sources */,
 				F7320D382C99255900BBEDD2 /* AppDelegate.swift in Sources */,
@@ -407,6 +426,7 @@
 				F74C84112C9A900B00014D5B /* MenuDetailViewModel.swift in Sources */,
 				F74C83E52C99A37100014D5B /* ResponseModel.swift in Sources */,
 				F74C840B2C9A85C200014D5B /* MenuTableViewCell.swift in Sources */,
+				F7E42A2D2CA219D10081BA54 /* MenuHelper.swift in Sources */,
 				F74C84062C9A801F00014D5B /* MenuViewModel.swift in Sources */,
 				F74C83FE2C9A5DA800014D5B /* UIView+EXT.swift in Sources */,
 			);
@@ -557,8 +577,8 @@
 				INFOPLIST_FILE = OrderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,9 +586,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atallah.OrderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -584,8 +608,8 @@
 				INFOPLIST_FILE = OrderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,9 +617,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atallah.OrderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

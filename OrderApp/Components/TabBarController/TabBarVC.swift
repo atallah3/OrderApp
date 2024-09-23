@@ -26,7 +26,7 @@ class TabBarVC: UITabBarController {
 //    }
 //    
 //    @objc func updateBadge() {
-//        // Safely updating the badge value
+//        
 //        let savedOrderCount = vm.getSavedOrderCount()
 //        print(savedOrderCount)
 //        orderTabItem.badgeValue = savedOrderCount > 0 ? "\(savedOrderCount)" : nil
@@ -42,10 +42,15 @@ class TabBarVC: UITabBarController {
         
         
         let firstNavController = UINavigationController(rootViewController: categoryVC)
-        let secondNavController = UINavigationController(rootViewController: OrderVC)
-        
         firstNavController.tabBarItem = UITabBarItem(title: "Category", image: UIImage(systemName: "list.bullet"), tag: 0)
+        firstNavController.navigationBar.tintColor = .OAMidnightBlue
+        
+
+        let secondNavController = UINavigationController(rootViewController: OrderVC)
         secondNavController.tabBarItem = UITabBarItem(title: "Order", image: UIImage(systemName: "bag"), tag: 1)
+        secondNavController.navigationBar.tintColor = .OAMidnightBlue
+
+        
         
         
         self.viewControllers = [firstNavController, secondNavController]

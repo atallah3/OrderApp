@@ -39,4 +39,8 @@ class CategoriesViewModel {
         let menuVC = MenuVC(nibName: "MenuVC", vm: MenuViewModel(category: category.lowercased()))
         view.navigationController?.pushViewController(menuVC, animated: true)
     }
+    
+    func updateUserActivity() {
+        MenuHelper.shared.updateUserActivity(with: .categories)
+    }
 }

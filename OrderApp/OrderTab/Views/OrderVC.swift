@@ -27,6 +27,11 @@ class OrderVC: UIViewController {
         tableView.reloadData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        vm.updateUserActivity()
+    }
+    
     //MARK: - Functions
     private func configureViewController() {
         title = "Order"

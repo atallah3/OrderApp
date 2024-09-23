@@ -46,4 +46,8 @@ class MenuViewModel {
         let menuDetailVC = MenuDetailVC(nibName: "MenuDetailVC", vm: MenuDetailViewModel(menuItem: menuItem))
         view.navigationController?.pushViewController(menuDetailVC, animated: true)
     }
+    
+    func updateUserActivity() {
+        MenuHelper.shared.updateUserActivity(with: .menu(category: category))
+    }
 }

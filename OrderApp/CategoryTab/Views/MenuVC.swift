@@ -32,6 +32,10 @@ class MenuVC: UIViewController {
         configureTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        vm.updateUserActivity()
+    }
     //MARK: - Funcitons
     private func configureViewController() {
         title = vm.getCategory().capitalized
@@ -71,6 +75,7 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let item = vm.getMenuItem(indexPath: indexPath) else { return }
         print(item)
         vm.showMenuDetailScreen(view: self, menuItem: item)

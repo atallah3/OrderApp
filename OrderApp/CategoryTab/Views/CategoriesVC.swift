@@ -22,6 +22,10 @@ class CategoriesVC: UIViewController {
         configureTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        vm.updateUserActivity()
+    }
     //MARK: - Functions
     func configureViewController() {
         title = "Categories"
@@ -62,6 +66,7 @@ extension CategoriesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let category = vm.getCategory(indexPath: indexPath) else { return }
         vm.showMenuScreen(view: self, category: category)
     }

@@ -10,8 +10,6 @@ import UIKit
 class NetworkManager {
     
     static let shared = NetworkManager()
-    static let order = Order()
-    
     private init() {}
     
     let baseURL = URL(string: "http://localhost:8080/")

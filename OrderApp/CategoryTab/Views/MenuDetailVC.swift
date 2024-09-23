@@ -36,6 +36,11 @@ class MenuDetailVC: UIViewController {
         getMenuDetailsData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        vm.updateUserActivity()
+    }
+    
     //MARK: - Funcitons
     private func configureViewController() {
         view.addGradientBackgroundColor(with: UIColor.orangeToLightGradient)

@@ -45,4 +45,8 @@ class MenuDetailViewModel {
             }
         }
     }
+    
+    func updateUserActivity() {
+        MenuHelper.shared.updateUserActivity(with: .menuItemDetail(menuItem))
+    }
 }
