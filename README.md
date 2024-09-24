@@ -37,4 +37,4 @@ This app is designed to facilitate order management for a restaurant using a Loc
 3. **Submit the Order:** Once you're satisfied with your order, tap the "Submit" button in navigaton bar to finalize and send your order to the LocalHost server for processing.
 
 ## Contact
-For any inquiries, feel free to reach out to [Abedelrahman Atallah](mailto:aratallah3@gmail.com).
+For any inquiries, feel free to reach out to [Abdelrahman Atallah](mailto:aratallah3@gmail.com).
