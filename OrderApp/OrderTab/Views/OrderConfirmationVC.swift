@@ -41,6 +41,7 @@ class OrderConfirmationVC: UIViewController {
         super.viewWillDisappear(animated)
         delegate?.orderConfirmationDidDismiss()
     }
+    
     //MARK: - Functions
     private func configureViewController() {
         title = "Order Confirmed"

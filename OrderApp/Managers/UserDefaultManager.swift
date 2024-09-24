@@ -16,7 +16,6 @@ class UserDefaultManager {
     
     private init() {}
     
-    
     private func loadOrders() -> [DeliverdOrder] {
         guard let data = UserDefaults.standard.data(forKey: UserDefaultManager.orderKey) else { return [] }
         

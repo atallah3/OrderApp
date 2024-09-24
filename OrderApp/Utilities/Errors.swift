@@ -14,4 +14,3 @@ enum NetworkErrors: Error, LocalizedError {
     case imageDataMissing
 }
 
-public let orderUpdateNotificatoin = Notification.Name("orderUpdateNotificatoin")

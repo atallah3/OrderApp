@@ -36,6 +36,7 @@ class MenuVC: UIViewController {
         super.viewDidAppear(animated)
         vm.updateUserActivity()
     }
+    
     //MARK: - Funcitons
     private func configureViewController() {
         title = vm.getCategory().capitalized

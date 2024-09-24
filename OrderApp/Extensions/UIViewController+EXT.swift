@@ -29,7 +29,6 @@ extension UIViewController {
             sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 50
         }
-        
         present(viewController, animated: true, completion: nil)
     }
 }

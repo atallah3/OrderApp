@@ -41,7 +41,6 @@ class MenuViewModel {
         category
     }
     
-    
     func showMenuDetailScreen(view: UIViewController, menuItem: MenuItem) {
         let menuDetailVC = MenuDetailVC(nibName: "MenuDetailVC", vm: MenuDetailViewModel(menuItem: menuItem))
         view.navigationController?.pushViewController(menuDetailVC, animated: true)

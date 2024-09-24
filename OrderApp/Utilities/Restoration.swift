@@ -70,8 +70,6 @@ extension NSUserActivity {
             }
         }
     }
-    
-    
 }
 
 enum StateRestorationController {

@@ -69,7 +69,6 @@ class OrderVC: UIViewController {
 
 //MARK: - TableView Extension
 extension OrderVC: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vm.getSavedOrderCount()
     }

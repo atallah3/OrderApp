@@ -7,12 +7,13 @@
 
 import UIKit
 
+public let orderUpdateNotificatoin = Notification.Name("orderUpdateNotificatoin")
+
 class OrderViewModel {
     
-    var minutesToPrepare: Int = 0
-    var image: UIImage?
-    let netwoekManager = NetworkManager.shared
-    
+    private var minutesToPrepare: Int = 0
+    private var image: UIImage?
+    private let netwoekManager = NetworkManager.shared
     private var orders: [DeliverdOrder] = [] {
         didSet {
             NotificationCenter.default.post(name: orderUpdateNotificatoin , object: nil)

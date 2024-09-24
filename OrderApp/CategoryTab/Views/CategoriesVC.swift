@@ -26,6 +26,7 @@ class CategoriesVC: UIViewController {
         super.viewDidAppear(animated)
         vm.updateUserActivity()
     }
+    
     //MARK: - Functions
     func configureViewController() {
         title = "Categories"
